@@ -9,7 +9,7 @@ const ProtectedRoute = ({
 }: Props) => {
   const token =
     localStorage.getItem(
-      "accessToken"
+      "token"
     );
 
   if (!token) {
@@ -21,7 +21,7 @@ const ProtectedRoute = ({
     );
   }
 
-  return children;
+  return <>{children}</>;
 };
 
 export default ProtectedRoute;

@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import {
   createApi,
   fetchBaseQuery,
@@ -9,7 +11,7 @@ export const baseApi =
 
     baseQuery: fetchBaseQuery({
       baseUrl:
-        "http://localhost:8000/api/v1",
+        import.meta.env.VITE_API_URL,
 
       prepareHeaders: (
         headers
